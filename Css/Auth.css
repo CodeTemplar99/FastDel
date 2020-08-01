@@ -1,0 +1,42 @@
+.s1 {
+    background-image: url("/images/undraw_fill_forms_yltj.png") !important;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.s1-inner {
+    width: 35%;
+}
+
+.s1-inner .welcome {
+    font-size: 200%;
+    color: #4f2e8d;
+}
+
+.s1-inner input {
+    border: hidden;
+    border-bottom: 1px solid #3d558f;
+    border-radius: 0px;
+}
+
+label {
+    display: none;
+}
+
+.s1-inner input:focus {
+    border: hidden;
+}
+
+.s1-inner button {
+    background: #4f2e8d;
+    width: 100%;
+    /* height: 6vh; */
+    padding: 10px;
+    border: none;
+}
+
+.s1-inner button:hover {
+    background: linear-gradient(to right, #4f2e8d, #17a0b3);
+}
