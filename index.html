@@ -8,9 +8,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FastDel</title>
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="./icons/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
+    <link href="./icons/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">  
     <link href="./Css/styled.css" rel="stylesheet" type="text/css">
+
+    <!-- jquery  -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- bootstrap -->
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <!-- javascript -->
     <script defer src="./js/spine.js"></script>
+    <!-- vue -->
+    <script src="./js/vue.js"></script>
 </head>
 
 <body>
@@ -20,33 +28,32 @@
             <a class="navbar-brand font-weight-bolder" href="#">Fas<span class="strip">tDel</span></a>
         </div>
         <div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" onclick="showSideBar()"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item mx-4 active">
+                    <li class="nav-item mx-0 active">
                         <a class="nav-link" href="#">Welcome
                             <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item mx-4">
+                    <li class="nav-item mx-0">
                         <a class="nav-link" href="#">About Us<span>
                                 <!-- <i class="fa fa-question-circle tab-icons ml-1"></i> -->
                             </span>
                         </a>
                     </li>
-                    <li class="nav-item mx-4">
+                    <li class="nav-item mx-0">
                         <a class="nav-link" href="#">Terms of Service<span>
                                 <!-- <i class="fa fa-users tab-icons ml-1"></i> -->
                             </span></a>
                     </li>
-                    <li class="nav-item mx-4">
+                    <!-- <li class="nav-item mx-0">
                         <a class="nav-link" href="#">Contact Us <span>
-                                <!-- <i class="fa fa-phone tab-icons ml-1"></i> -->
+                                <i class="fa fa-phone tab-icons ml-1"></i>
                             </span></a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -207,7 +214,7 @@
             <div class="hrr-5 hidden-xs"></div>
         </center>
 
-        <p class="text-center small m-0">
+        <p class="text-center small m-0 foot-text">
             &#169; 2020 FastDel<br>
             FastDel is a registered trademark of FastDel.
         </p>
