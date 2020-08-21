@@ -1,4 +1,7 @@
 @media screen and (max-width:320px) {
+  .navbar-brand {
+    font-size: 150%;
+  }
 
   .memo-box-super {
     overflow: auto;
@@ -63,6 +66,14 @@
     cursor: pointer;
     position: relative;
     box-shadow: 3px 4px 10px hsla(0, 1%, 23%, 0.74);
+  }
+
+  .list-head {
+    background: #17a0b3;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .cate-items {
