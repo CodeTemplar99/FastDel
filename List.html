@@ -32,8 +32,8 @@
     </nav>
 
     <div class="container p-0">
-
-      <div class="jumbotron list-super-con mb-0 pt-2 px-0">
+      <!-- list super con -->
+      <div class="jumbotron list-super-con mb-0 rounded-0 pt-2 px-0" v-show="show_list_view">
         <p class="list-intro ml-2 text-muted">All Lists</p>
         <!-- list limiter -->
         <div class="jumbotron bg-transparent rounded-0 m-0 px-2 pt-0 pb-3 list-limiter">
@@ -207,21 +207,22 @@
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
-                <div class="modal-body p-1">
+                <div class="modal-body p-2">
                   <ul class="list-group">
-                    <li class="list-group-item d-flex justify-content-between align-items-center bg-secondary text-white">
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center rounded-0 bg-secondary text-white">
                       <p class="lead m-0">Items</p>
                       <p class="m-0">Qty</p>
                     </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item d-flex justify-content-between align-items-center rounded-0">
                       <p class="m-0">20 <span class="text-mute small">Items</span></p>
                       <span>$00.00</span>
                     </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item d-flex justify-content-between align-items-center rounded-0">
                       <p class="m-0">Service Charge</p>
                       <span>$00.00</span>
                     </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item d-flex justify-content-between align-items-center rounded-0">
                       <p class="m-0 font-weight-bold">Order total</p>
                       <span>$00.00</span>
                     </li>
@@ -250,19 +251,108 @@
 
         </div>
 
+      </div>
+      <!-- end of list super con -->
 
-        <div class="jumbotron m-0 p-1 fixed-bottom bottom-nav">
-          <ul class="list-group list-group-horizontal justify-content-between">
-            <li class="list-group-item m-0 col-2 d-flex justify-content-center bg-transparent border-0"><i
-                class="fa fa-list-alt"></i></li>
-            <li class="list-group-item m-0 col-2 d-flex justify-content-center bg-transparent border-0"><i
-                class="fa fa-tasks"></i></li>
-            <li class="list-group-item m-0 col-2 d-flex justify-content-center bg-transparent border-0"><i
-                class="fa fa-user"></i></li>
+      <!-- Action super con -->
+      <div class="jumbotron action-super-con mb-0 rounded-0 pt-2 px-0" v-show="show_action_view">
+        <p class="list-intro ml-2 text-muted">Actions Lists</p>
 
-          </ul>
 
+      </div>
+      <!-- end of action super con -->
+
+
+      <!-- Account super con -->
+      <div class="jumbotron account-super-con mb-0 rounded-0 pt-2 px-0" v-show="show_account_view">
+        <!-- <p class="list-intro ml-2 text-muted">Actions Lists</p> -->
+        <div class="jumbotron mx-2 bg-white" id="view4">
+          <p class="lead p-0 m-0 mb-2
+             text-center"><i class="fa fa-user fa-4x dp-mock"></i></p>
+          <!-- profile list group -->
+          <div class="list-group">
+            <!-- profile list item -->
+            <div class="list-group-item list-group-item-action profile-list-item">
+              <div class="profile-icons-con">
+                <p><i class="fa fa-user"></i></p>
+              </div>
+              <div class="profile-type-con col-9 pl-1">
+                <p class="type-intro mb-2 text-muted">Name</p>
+                <p class="type-intro mb-0 font-weight-bold">UserName</p>
+                <span class="small text-muted">
+                  This is not your username, this name will only be visible for your deliveries.</span>
+              </div>
+              <div class="type-edit-con"><i class="fa fa-pencil-alt p-1 rounded-circle"></i>
+              </div>
+            </div>
+            <!-- end of profile list item -->
+            <!-- profile list item -->
+            <div class="list-group-item list-group-item-action profile-list-item">
+              <div class="profile-icons-con">
+                <p><i class="fa fa-map-marker-alt"></i></p>
+              </div>
+              <div class="profile-type-con col-9 pl-1">
+                <p class="type-intro mb-2 text-muted">Address</p>
+                <p class="type-intro mb-0 font-weight-bold">XX Location street, Uyo</p>
+                <span class="small text-muted">
+                  Change this address when you want to use a different location for your delivery
+                </span>
+              </div>
+              <div class="type-edit-con"><i class="fa fa-pencil-alt p-1 rounded-circle"></i>
+              </div>
+            </div>
+            <!-- end of profile list item -->
+            <!-- profile list item -->
+            <div class="list-group-item list-group-item-action mb-2 profile-list-item">
+              <div class="profile-icons-con">
+                <p><i class="fa fa-mobile-alt"></i></p>
+              </div>
+              <div class="profile-type-con col-9 pl-1">
+                <p class="type-intro mb-2 text-muted">Phone</p>
+                <p class="type-intro mb-0 font-weight-bold">+234567890112</p>
+                <span class="small text-muted mb-1 invisible">
+                  Contact may not be changed.</span>
+              </div>
+              <div class="type-edit-con"><i class="fa fa-pencil-alt invisible p-1 rounded-circle"
+                  id="contact-no-edit"></i>
+              </div>
+            </div>
+            <!-- end of profile list item -->
+          </div>
+          <!-- end of profile list group -->
+
+          <!-- security list group -->
+          <div class="list-group security-list-group">
+            <p class="mb-1">Password and security</p>
+            <small class="text-muted">Always keep your password details private</small>
+            <!-- profile list item -->
+            <div class="list-group-item list-group-item-action profile-list-item">
+              <div class="profile-icons-con">
+                <p><i class="fa fa-lock"></i></p>
+              </div>
+              <div class="profile-type-con col-9 pl-1">
+                <p class="type-intro mb-2 text-muted">Password</p>
+                <p class="type-intro mb-0 font-weight-bold">*********</p>
+              </div>
+              <div class="type-edit-con"><i class="fa fa-pencil-alt p-1 rounded-circle"></i>
+              </div>
+            </div>
+          </div>
         </div>
+
+      </div>
+      <!-- end of account super con -->
+
+      <div class="jumbotron m-0 p-1 fixed-bottom bottom-nav">
+        <ul class="list-group list-group-horizontal justify-content-between">
+          <li class="list-group-item m-0 col-2 d-flex justify-content-center bg-transparent border-0"
+            @click="display_list_view"><i class="fa fa-list-alt"></i></li>
+          <li class="list-group-item m-0 col-2 d-flex justify-content-center bg-transparent border-0"
+            @click="display_action_view"><i class="fa fa-tasks"></i></li>
+          <li class="list-group-item m-0 col-2 d-flex justify-content-center bg-transparent border-0"
+            @click="display_account_view"><i class="fa fa-user"></i></li>
+
+        </ul>
 
       </div>
     </div>

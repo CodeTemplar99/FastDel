@@ -129,4 +129,33 @@
 
     width: 20%;
   }
+
+
+  /* -- - - - - ------------ */
+  #view4 .dp-mock {
+    color: #b6b6b6;
+    /* background: #dd1043; */
+    border: 3px solid #dd1043;
+    border-radius: 50%;
+    padding: 20px;
+  }
+
+
+  .profile-list-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1px;
+  }
+
+  .profile-type-con {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 1px;
+  }
+
+  .security-list-group {
+    margin-top: 20px;
+  }
+
 }
