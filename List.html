@@ -42,8 +42,8 @@
             <div class="jumbotron bg-secondary m-0 p-1 d-flex justify-content-between align-items-center list-head">
               <span>12/30/21</span>
               <div class="jumbotron bg-transparent del-edit-con m-0 p-1 d-flex justify-content-between">
-                <i class="fa fa-trash"></i>
-                <i class="fa fa-pencil-alt"></i>
+                <i class="fa fa-trash" data-toggle="modal" data-target="#deleteModal"></i>
+                <i class="fa fa-pencil-alt" data-toggle="modal" data-target="#newListModal"></i>
 
               </div>
             </div>
@@ -77,10 +77,140 @@
               <i class="fa fa-paper-plane pr-2"></i>
             </div>
           </div>
+          <!-- Delete Modal -->
+          <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <!-- <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Delete List</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> -->
+                <div class="modal-body">
+                  <p>This action cannot be undone.<br>
+                    Delete?</p>
+                </div>
+                <div class="modal-footer"> <button type="button" class="btn btn-danger p-1">Delete</button>
+                  <button type="button" class="btn btn-secondary p-1" data-dismiss="modal">Cancel</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of Delete Modal -->
+
+          <!-- new list Modal -->
+          <div class="modal fade" id="newListModal" tabindex="-1" role="dialog" aria-labelledby="newListModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Create new list</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body p-0 px-2">
+                  <form>
+                    <ul class="list-group p-0">
+
+                      <li class="list-group-item list-group-item d-flex justify-content-between align-items-center">
+
+                        <div class="form-group p-0 m-0 item-input">
+                          <input type="email" placeholder="item" class="form-control">
+                        </div>
+
+                        <div class="form-group p-0 m-0 price-input">
+                          <input type="email" placeholder="price" class="form-control">
+                        </div>
+                        <div class="form-group p-0 m-0 qty-input">
+                          <input type="email" placeholder="qty" class="form-control">
+                        </div>
+                        <p class="small text-muted m-0 mx-sm-2"><i class=" fa fa-times-circle"></i></p>
+                      </li>
+
+                      <li class="list-group-item list-group-item d-flex justify-content-between align-items-center">
+
+                        <div class="form-group p-0 m-0 item-input">
+                          <input type="email" placeholder="item" class="form-control">
+                        </div>
+
+                        <div class="form-group p-0 m-0 price-input">
+                          <input type="email" placeholder="price" class="form-control">
+                        </div>
+                        <div class="form-group p-0 m-0 qty-input">
+                          <input type="email" placeholder="qty" class="form-control">
+                        </div>
+                        <p class="small text-muted m-0 mx-sm-2"><i class="fa fa-times-circle"></i></p>
+                      </li>
+
+                      <li class="list-group-item list-group-item d-flex justify-content-between align-items-center">
+
+                        <div class="form-group p-0 m-0 item-input">
+                          <input type="email" placeholder="item" class="form-control">
+                        </div>
+
+                        <div class="form-group p-0 m-0 price-input">
+                          <input type="email" placeholder="price" class="form-control">
+                        </div>
+                        <div class="form-group p-0 m-0 qty-input">
+                          <input type="email" placeholder="qty" class="form-control">
+                        </div>
+                        <p class="small text-muted m-0 mx-sm-2"><i class="fa fa-times-circle"></i></p>
+                      </li>
+
+                      <li class="list-group-item list-group-item d-flex justify-content-between align-items-center">
+
+                        <div class="form-group p-0 m-0 item-input">
+                          <input type="email" placeholder="item" class="form-control">
+                        </div>
+
+                        <div class="form-group p-0 m-0 price-input">
+                          <input type="email" placeholder="price" class="form-control">
+                        </div>
+                        <div class="form-group p-0 m-0 qty-input">
+                          <input type="email" placeholder="qty" class="form-control">
+                        </div>
+                        <p class="small text-muted m-0 mx-sm-2"><i class="fa fa-times-circle"></i></p>
+                      </li>
+
+                      <li class="list-group-item list-group-item d-flex justify-content-between align-items-center">
+
+                        <div class="form-group p-0 m-0 item-input">
+                          <input type="email" placeholder="item" class="form-control">
+                        </div>
+
+                        <div class="form-group p-0 m-0 price-input">
+                          <input type="email" placeholder="price" class="form-control">
+                        </div>
+                        <div class="form-group p-0 m-0 qty-input">
+                          <input type="email" placeholder="qty" class="form-control">
+                        </div>
+                        <p class="small text-muted m-0 mx-sm-2"><i class="fa fa-times-circle"></i></p>
+                      </li>
+
+                    </ul>
+                  </form>
+                  <p class="mt-4 m-2 btn btn-outline-secondary">more fields</p>
+                </div>
+
+                <div class="modal-footer p-2">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary ">Save list</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- end of new list modal -->
+
+
 
           <!-- list -->
           <div class="jumbotron list m-0 p-0" id="empty_list">
-            <i class="fa fa-plus-square"></i>
+            <i class="fa fa-plus-square" data-toggle="modal" data-target="#newListModal"></i>
             <p class="text-center small text-muted">Click the icon to start a new list</p>
           </div>
 
@@ -102,8 +232,6 @@
 
       </div>
     </div>
-  </div>
-  </div>
   </div>
 </body>
 

@@ -92,9 +92,10 @@
     font-size: 13px;
   }
 
-    .list-foot .fa{
-      font-size: 130%;
-    }
+  .list-foot .fa {
+    font-size: 130%;
+  }
+
   .list-head,
   .list-foot {
     height: 35px;
@@ -102,5 +103,30 @@
 
   .bottom-nav .fa {
     font-size: 120%;
+  }
+
+  #newListModal .list-group-item {
+    padding: 5px;
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 2px;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .item-input,
+  .price-input,
+  .qty-input {
+    /* border: 1px solid red; */
+    margin: 2px;
+    width: 45%;
+  }
+
+  .price-input {
+    width: 22%;
+  }
+
+  .qty-input {
+
+    width: 20%;
   }
 }
